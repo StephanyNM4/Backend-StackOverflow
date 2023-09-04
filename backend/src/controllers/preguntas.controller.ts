@@ -37,34 +37,36 @@ export const obtenerPreguntas = async (req: Request, res: Response) => {
 export const crearPregunta = (req:Request, res:Response) => {
     let nuevaPregunta = new PreguntaSchema(req.body);
     nuevaPregunta.save()
-    .then(resultado=>{
+    .then((result: { id: any; titulo: any; })=>{
         UsuarioSchema.updateOne({_id: new mongoose.Types.ObjectId(req.params.id)},{
             
                 $push: {
                     preguntas: {
-                        id: resultado.id,
-                        titulo: resultado.titulo
+                        id: result.id,
+                        titulo: result.titulo
                     }
                 }
             }
-            ).then((result)=>{
+            ).then((result: any)=>{
                 // res.send({status: true, message: 'Comentario agregado', result});
                 // res.end();
-            }).catch((error)=>{
+            }).catch((error: any)=>{
                 // res.send(error);
                 // res.end();
             });
 
-        res.send({status: true, message: 'Pregunta agregada', resultado});
+        res.send({status: true, message: 'Pregunta agregada', result});
         res.end();
     })
-    .catch(error=>{
+    .catch((error: any)=>{
         res.send({status: false, message: 'Pregunta no agregada', error});
         res.end();
     })
 
     
 }
+
+
 
 // (collection preguntas) get detalle pregunta cruce con usuario para obtener nombre e url imagen
 export const obtenerDetallePregunta = async (req: Request, res: Response) => {
@@ -102,10 +104,10 @@ export const obtenerDetallePregunta = async (req: Request, res: Response) => {
 // (collection preguntas) put actualizar votos de preguntas con botones en javascript
 export const modificarVotos = (req:Request, res:Response) => {
     PreguntaSchema.updateOne({id: req.params.id},{votos: req.body.votos}
-    ).then((result)=>{
+    ).then((result: any)=>{
         res.send({status: true, message: 'Comentario agregado', result});
         res.end();
-    }).catch((error)=>{
+    }).catch((error: any)=>{
         res.send(error);
         res.end();
     });
