@@ -1,0 +1,23 @@
+Inventario stack-overflow
+
+collection usuarios
+collection preguntas
+
+(collection usuarios) get todos los usuarios para listar usuarios
+(collection usuarios) get usuario actual
+(collection preguntas) get preguntas cruce con usuario para obtener nombre e imagen
+(collection preguntas) post crear pregunta (push de la pregunta en el usuario que hizo la pregunta)
+(collection preguntas) get detalle pregunta cruce con usuario para obtener nombre e url imagen
+(collection preguntas) put actualizar votos de preguntas con botonoes en javascropt
+(collection preguntas) get respuesta para pregunta seleccionada y un cruce con el usuario que respondio para obtener nombre e imagen
+
+
+PASOS BACKEND:
+Estructuracollection preguntas
+Base de datos
+Inventario
+Modelos y esquemas
+Rutas
+Controladores
+Javascript
+

@@ -1,0 +1,43 @@
+{
+
+    "id": "1",
+    "titulo": "¿Donde está el dinero?",
+    "descripcion": "Lorem ipsum dolor sit.",
+    "fecha": "11/11/2012",
+    "votos": 5,
+    "vistas": 10,
+    "hashtags": ["off-topic", "pn"],
+    "idUsuario": "2",
+    "respuestas": [
+    {
+    "id": "1",
+    "descripcion": "Se lo robaron",
+    "fecha": "12/12/2012",
+    "votos": "12234123",
+    "idUsuario": "2"
+    }
+    ]
+    
+}
+
+{
+
+    "id": "2",
+    "titulo": "¿Donde estan las rubias?",
+    "descripcion": "Lorem ipsum dolor sit.",
+    "fecha": "11/11/2012",
+    "votos": 5,
+    "vistas": 10,
+    "hashtags": ["off-topic", "pn"],
+    "idUsuario": "2",
+    "respuestas": [
+    {
+    "id": "1",
+    "descripcion": "Las encontraron",
+    "fecha": "12/12/2012",
+    "votos": "12234123",
+    "idUsuario": "2"
+    }
+    ]
+    
+}

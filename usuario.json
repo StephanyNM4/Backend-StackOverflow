@@ -1,0 +1,23 @@
+{
+    "id": "1",
+    "nombre": "Goku",
+    "urlImage": "img/profile-pics/goku.jpg",
+    "preguntas": [
+        {
+            "id": "1",
+            "titulo": "¿Dónde está el dinero?"
+        }
+    ]
+}
+
+{
+    "id": "2",
+    "nombre": "Rubias",
+    "urlImage": "img/profile-pics/baby.jpg",
+    "preguntas": [
+        {
+            "id": "1",
+            "titulo": "¿Dónde están las rubias?"
+        }
+    ]
+}

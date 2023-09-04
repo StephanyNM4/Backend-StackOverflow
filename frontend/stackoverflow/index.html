@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>StackOverflow</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light px-3">
+      <a class="navbar-brand" href="#"><img class="logo" src="img/logo.png" alt=""></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <form class="form-inline my-2 my-lg-0 ml-auto">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-warning my-2 my-sm-0" type="button">Search</button>
+        </form>
+        <img src="img/profile-pics/goku.jpg" class="profile-pic" onclick="modalUsuario()">
+      </div>
+    </nav>
+    <main class="container mt-5" id="listaPreguntas">
+      <div class="row">
+        <div class="col-12">
+          <h2>Preguntas Top</h2>
+          <button class="btn btn-outline-warning btn-sm" onclick="modalPregunta()">Nueva Pregunta</button>
+        </div>
+      </div>
+      <!-- Item -->
+      <div class="row question-row" id="preguntas-renderizar">
+        <div class="col-md-2 col-lg-1 text-center text-muted small">
+          <div>65734</div>
+          <div>Votos</div>
+        </div>
+        <div class="col-md-2 col-lg-1 text-center text-muted small">
+          <div>0</div>
+          <div>Respuestas</div>
+        </div>
+        <div class="col-md-2 col-lg-1 text-center text-muted small">
+          <div>45657</div>
+          <div>Vistas</div>
+        </div>
+        <div class="col-md-6 col-lg-9">
+          <div>
+            <button class="btn btn-link" onclick="verDetallePregunta()">¿Dónde está el dinero?</button>
+          </div>
+          <div>
+            <span class="badge badge-warning">off-topic</span>
+            <span class="badge badge-warning">honduras</span>
+            <span class="badge badge-warning">joh</span>
+          </div>
+          <div class="float-right">
+            <span class="small text-muted">12/12/2012</span>
+            <span class="small user-text">Goku</span>
+            <img src="img/profile-pics/goku.jpg" class="small-profile-pic">
+          </div>
+        </div>
+      </div>
+      <!-- Fin Itemn -->
+      <!-- Item -->
+      <!-- <div class="row question-row">
+        <div class="col-md-2 col-lg-1 text-center text-muted small">
+          <div>20</div>
+          <div>Votos</div>
+        </div>
+        <div class="col-md-2 col-lg-1 text-center text-muted small">
+          <div>10</div>
+          <div>Respuestas</div>
+        </div>
+        <div class="col-md-2 col-lg-1 text-center text-muted small">
+          <div>20</div>
+          <div>Vistas</div>
+        </div>
+        <div class="col-md-6 col-lg-9">
+          <div>
+            <button class="btn btn-link" onclick="verDetallePregunta()">How to use/import http module?</button>
+          </div>
+          <div>
+            <span class="badge badge-warning">amazon-web-services</span>
+            <span class="badge badge-warning">aws-lambda</span>
+            <span class="badge badge-warning">amazon-cloudfront</span>
+            <span class="badge badge-warning">aws-lambda-edge</span>
+          </div>
+          <div class="float-right">
+            <span class="small text-muted">12/12/2012</span>
+            <span class="small user-text">Vegeta</span>
+            <img src="img/profile-pics/vegeta.jpg" class="small-profile-pic">
+          </div>
+        </div>
+      </div> -->
+      <!-- Fin Itemn -->
+      <!-- Item -->
+      <!-- <div class="row question-row">
+        <div class="col-md-2 col-lg-1 text-center text-muted small">
+          <div>10</div>
+          <div>Votos</div>
+        </div>
+        <div class="col-md-2 col-lg-1 text-center text-muted small">
+          <div>0</div>
+          <div>Respuestas</div>
+        </div>
+        <div class="col-md-2 col-lg-1 text-center text-muted small">
+          <div>10</div>
+          <div>Vistas</div>
+        </div>
+        <div class="col-md-6 col-lg-9">
+          <div>
+            <button class="btn btn-link" onclick="verDetallePregunta()">How to interpolate discretly a smooth curve from an array of points in 2D</button>
+          </div>
+          <div>
+            <span class="badge badge-warning">curve</span>
+            <span class="badge badge-warning">spline</span>
+            <span class="badge badge-warning">smoothing</span>
+          </div>
+          <div class="float-right">
+            <span class="small text-muted">12/12/2012</span>
+            <span class="small user-text">Krillin</span>
+            <img src="img/profile-pics/krilin.jpg" class="small-profile-pic">
+          </div>
+        </div>
+      </div> -->
+      <!-- Fin Itemn -->
+      <!-- Item -->
+      <!-- <div class="row question-row">
+        <div class="col-md-2 col-lg-1 text-center text-muted small">
+          <div>20</div>
+          <div>Votos</div>
+        </div>
+        <div class="col-md-2 col-lg-1 text-center text-muted small">
+          <div>10</div>
+          <div>Respuestas</div>
+        </div>
+        <div class="col-md-2 col-lg-1 text-center text-muted small">
+          <div>29</div>
+          <div>Vistas</div>
+        </div>
+        <div class="col-md-6 col-lg-9">
+          <div>
+            <button class="btn btn-link" onclick="verDetallePregunta()">Create Object in Azure Analysis Service using REST API call</button>
+          </div>
+          <div>
+            <span class="badge badge-warning">amazon-web-services</span>
+            <span class="badge badge-warning">saas</span>
+          </div>
+          <div class="float-right">
+            <span class="small text-muted">12/12/2012</span>
+            <span class="small user-text">Patricio</span>
+            <img src="img/profile-pics/patricio.jpg" class="small-profile-pic">
+          </div>
+        </div>
+      </div> -->
+      <!-- Fin Itemn -->
+      <!-- Item -->
+      <!-- <div class="row question-row">
+        <div class="col-md-2 col-lg-1 text-center text-muted small">
+          <div>0</div>
+          <div>Votos</div>
+        </div>
+        <div class="col-md-2 col-lg-1 text-center text-muted small">
+          <div>0</div>
+          <div>Respuestas</div>
+        </div>
+        <div class="col-md-2 col-lg-1 text-center text-muted small">
+          <div>0</div>
+          <div>Vistas</div>
+        </div>
+        <div class="col-md-6 col-lg-9">
+          <div>
+            <button class="btn btn-link" onclick="verDetallePregunta()">Why am I getting a Parsing Error when running a React App with Node.js?</button>
+          </div>
+          <div>
+            <span class="badge badge-warning">nodejs</span>
+            <span class="badge badge-warning">reactjs</span>
+            <span class="badge badge-warning">frontend</span>
+          </div>
+          <div class="float-right">
+            <span class="small text-muted">12/12/2012</span>
+            <span class="small user-text">Yamcha</span>
+            <img src="img/profile-pics/yamcha.jpg" class="small-profile-pic">
+          </div>
+        </div>
+      </div> -->
+      <!-- Fin Itemn -->
+      <!-- hola -->
+    </main>
+
+    <main class="container mt-5" id="detallePregunta" style="display: none;">
+      <div id="detallePregunta1">
+      <div class="row" >
+        <div class="col-12">
+          <h2><svg class="arrow" onclick="verPreguntas()" width="36" height="36" viewBox="0 0 36 36"><path d="M16,0,16,32,0,16Z"/></svg> How to use/import http module?</h2>
+        </div>
+      </div>
+      <div class="row question">
+        <div class="col-1 text-center">
+          <div><svg class="arrow" onclick="votar(1)" width="36" height="36" viewBox="0 0 36 36"><path d="M2 26h32L18 10 2 26z"></path></svg></div>
+          <div class="h4 text-muted m-0">45</div>
+          <div><svg class="arrow" onclick="votar(-1)" width="36" height="36" viewBox="0 0 36 36"><path d="M2 10h32L18 26 2 10z"></path></svg></div>
+        </div>
+        <div class="col-10">
+          I've been playing with Angular 2 Quickstart.<br>
+          How can I use/import http module in Angular 2?<br>
+          I've looked at Angular 2 Todo's.js, but it doesn't use the http module.<br>
+          I've added "ngHttp": "angular/http", to dependencies in package.json because I've heard Angular 2 is somewhat modular.<br>
+        </div>
+        <div class="col-8">
+          <div>
+            <span class="badge badge-warning">angular</span>
+            <span class="badge badge-warning">angular-http</span>
+            <span class="badge badge-warning">modules</span>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="float-right text-center user-card">
+            <div class="text-muted small">12/12/2012</div>
+            <div><img src="img/profile-pics/majinboo.jpg" class="small-profile-pic mr-2">Majimboo</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h5>2 Respuestas</h5>
+      </div>
+    </div>
+      <!-- Respuesta -->
+      <div id="respuestas-renderizar">
+      <div class="row answer">
+        <div class="col-1 text-center">
+          <div><svg class="arrow" onclick="votar(1)" width="36" height="36" viewBox="0 0 36 36"><path d="M2 26h32L18 10 2 26z"></path></svg></div>
+          <div class="h4 text-muted m-0">105</div>
+          <div><svg class="arrow" onclick="votar(-1)" width="36" height="36" viewBox="0 0 36 36"><path d="M2 10h32L18 26 2 10z"></path></svg></div>
+        </div>
+        <div class="col-10">
+          In version 37 you need to do this:
+          <pre>///< reference path="typings/angular2/http.d.ts"/ ><br>import {Http} from "angular2/http";<br>And run this tsd command:<br>tsd install angular2/http</pre>
+        </div>
+        <div class="col-12">
+          <div class="float-right text-center user-card">
+            <div class="text-muted small">12/12/2012</div>
+            <div><img src="img/profile-pics/picoro.jpg" class="small-profile-pic mr-2">Picoro</div>
+          </div>
+        </div>
+      </div>
+      <!-- Fin Respuesta -->
+      <!-- Respuesta -->
+      <div class="row answer">
+        <div class="col-1 text-center">
+          <div><svg class="arrow" onclick="votar(1)" width="36" height="36" viewBox="0 0 36 36"><path d="M2 26h32L18 10 2 26z"></path></svg></div>
+          <div class="h4 text-muted m-0">10</div>
+          <div><svg class="arrow" onclick="votar(-1)" width="36" height="36" viewBox="0 0 36 36"><path d="M2 10h32L18 26 2 10z"></path></svg></div>
+        </div>
+        <div class="col-10">
+          In version 37 you need to do this:
+          <pre>import {Http} from "angular2/http";</pre>
+        </div>
+        <div class="col-12">
+          <div class="float-right text-center user-card">
+            <div class="text-muted small">12/12/2012</div>
+            <div><img src="img/profile-pics/roshi.jpg" class="small-profile-pic mr-2">Maestro Roshi</div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <!-- Fin Respuesta -->
+
+      <!-- Formulario nueva respuesta -->
+      <div class="row">
+        <div class="col-12">
+          <br><br><br>
+          <h5>Nueva Respuesta</h5>
+          <textarea class="form-control" cols="30" rows="7" placeholder="Respuesta"></textarea>
+          <span class="small text-muted">Etiquetas permitidas: br, pre</span><br>
+          <button class="btn btn-outline-warning">Publicar</button>
+        </div>
+      </div>
+      <hr class="my-5">
+    </main>
+
+<!-- Modal usuarios -->
+    <div class="modal fade" id="modal-usuarios" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content" >
+          <div class="modal-body">
+            <div class="row" id="modal-usuarios1">
+              <div class="col-3 p-0 m-0">
+                <img src="img/profile-pics/goku.jpg" class="img-fluid select-image" onclick="seleccionarUsuario(1)">
+              </div>
+              <div class="col-3 p-0 m-0">
+                <img src="img/profile-pics/picoro.jpg" class="img-fluid select-image" onclick="seleccionarUsuario(2)">
+              </div>
+              <div class="col-3 p-0 m-0">
+                <img src="img/profile-pics/vegeta.jpg" class="img-fluid select-image" onclick="seleccionarUsuario(3)">
+              </div>
+              <div class="col-3 p-0 m-0">
+                <img src="img/profile-pics/roshi.jpg" class="img-fluid select-image" onclick="seleccionarUsuario(4)">
+              </div>
+              <div class="col-3 p-0 m-0">
+                <img src="img/profile-pics/trunks.jpg" class="img-fluid select-image" onclick="seleccionarUsuario(5)">
+              </div>
+              <div class="col-3 p-0 m-0">
+                <img src="img/profile-pics/videl.jpg" class="img-fluid select-image" onclick="seleccionarUsuario(6)">
+              </div>
+              <div class="col-3 p-0 m-0">
+                <img src="img/profile-pics/mr_satan.jpg" class="img-fluid select-image" onclick="seleccionarUsuario(7)">
+              </div>
+              <div class="col-3 p-0 m-0">
+                <img src="img/profile-pics/patricio.jpg" class="img-fluid select-image" onclick="seleccionarUsuario(8)">
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          </div>
+        </div>
+      </div> 
+    </div>
+
+<!-- Modal Nueva pregunta -->
+    <div class="modal fade" id="modal-pregunta" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content" >
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-12">
+                <h5>Nueva Pregunta</h5>
+                <textarea id="titulo-pregunta" class="form-control" cols="30" rows="7" placeholder="Respuesta"></textarea>
+                <span class="small text-muted">Etiquetas permitidas: br, pre</span><br>
+                <input id="hashtag" class="form-control" placeholder="Hashtags (separadas por coma)">
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-warning" onclick="crearPregunta()">Publicar</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <script src="js/controlador.js"></script>
+  </body>
+</html>
